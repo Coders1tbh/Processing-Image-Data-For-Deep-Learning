@@ -1,23 +1,12 @@
-**Topics:**
-
-
-*   Reading an image file and converting it to an numpy array
-*   Resizing an image
 
 # getting an image using web get
 !wget 'https://tractive.com/blog/wp-content/uploads/2016/04/puppy-care-guide-for-new-parents.jpg'
 
 **Libraries that can be used for image processing:**
 
-
-
 1.  matplotlib.image
-1.   Pillow
-2.   OpenCV(cv2)
-
-
-
-
+2.   Pillow
+3.   OpenCV(cv2)
 
 
 # importing the image module from matplotlib library
