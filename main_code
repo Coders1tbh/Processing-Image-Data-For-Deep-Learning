@@ -1,0 +1,59 @@
+**Topics:**
+
+
+*   Reading an image file and converting it to an numpy array
+*   Resizing an image
+
+# getting an image using web get
+!wget 'https://tractive.com/blog/wp-content/uploads/2016/04/puppy-care-guide-for-new-parents.jpg'
+
+**Libraries that can be used for image processing:**
+
+
+
+1.  matplotlib.image
+1.   Pillow
+2.   OpenCV(cv2)
+
+
+
+
+
+
+# importing the image module from matplotlib library
+
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+
+
+# Loading an image through matplotlib.image module
+
+img = mpimg.imread('/content/Dog.jpg')
+
+type(img)
+
+print(img.shape)
+
+print(img)
+
+# displaying the image from numpy array
+
+img_plot = plt.imshow(img) # img -> numpy representation of that particular array
+print(img.shape)
+plt.show()
+
+**Resizing an image using Pillow library**
+
+# Resizing an image
+from PIL import Image # 'i' should be in capital
+
+img = Image.open('/content/Dog.jpg')
+img_resized = img.resize((200,200))
+
+img_resized.save('dog_image_resized.jpg')
+
+img_res = mpimg.imread('/content/dog_image_resized.jpg')
+img_res_plot = plt.imshow(img_res)
+plt.show()
+
+print(img_res.shape)
